@@ -3,9 +3,10 @@
 
 // Execute `rustlings hint generics1` for hints!
 
-// I AM NOT DONE
+// I AM DONE
+use std::any::Any;
 
 fn main() {
-    let mut shopping_list: Vec<?> = Vec::new();
-    shopping_list.push("milk");
+    let mut shopping_list: Vec<Box<dyn Any>> = Vec::new();
+    shopping_list.push(Box::new("milk"));
 }
